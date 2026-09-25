@@ -2,7 +2,7 @@
 
 `3neti/settlement-envelope-philhealth` owns the synthetic `philhealth.bst.demo@1.0.0`
 workflow. It depends on the generic `3neti/settlement-envelope` contracts, not
-on x-change. The `^1.3` dependency uses the published workflow discovery and integration contracts.
+on x-change. The `^1.4` dependency uses the published driver source registry and workflow integration contracts.
 
 Public classes live under `ThreeNeti\SettlementEnvelopePhilhealth`:
 
@@ -13,11 +13,8 @@ Public classes live under `ThreeNeti\SettlementEnvelopePhilhealth`:
 
 Laravel automatically discovers `SettlementEnvelopePhilhealthServiceProvider`,
 which registers the bundled driver source and lazily binds the concrete adapter
-under the `settlement-envelope.workflow-adapters` container tag. This requires the
-upcoming settlement-envelope 1.4 source registry; before releasing this change,
-raise the dependency minimum from 1.3 to 1.4 after that version is published and
-refresh the lockfile. This candidate is not release-ready while its dependency
-minimum remains `^1.3`.
+under the `settlement-envelope.workflow-adapters` container tag using the
+settlement-envelope 1.4 source registry.
 
 Installation makes the workflow discoverable, but does not activate it, publish
 configuration, register routes, send notifications, or submit a workflow. Discovery
