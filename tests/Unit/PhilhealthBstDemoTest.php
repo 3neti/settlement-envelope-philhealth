@@ -111,7 +111,7 @@ it('ships an opt-in versioned workflow that requires review and a trusted amount
             'key' => 'amount_verified', 'source' => 'host', 'default' => false,
         ])
         ->and($definition['gates']['definitions'][0]['rule'])->toBe('checklist.required_accepted && signal.amount_verified')
-        ->and($manifest)->not->toHaveKeys(['repositories', 'version', 'extra'])
+        ->and($manifest)->not->toHaveKeys(['repositories', 'version'])
         ->and($manifest['require'])->not->toHaveKey('3neti/x-change');
 });
 

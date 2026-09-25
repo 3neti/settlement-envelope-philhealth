@@ -24,6 +24,11 @@
             "ThreeNeti\\SettlementEnvelopePhilhealth\\Tests\\": "tests/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": ["ThreeNeti\\SettlementEnvelopePhilhealth\\SettlementEnvelopePhilhealthServiceProvider"]
+        }
+    },
     "config": {
         "sort-packages": true,
         "allow-plugins": {
