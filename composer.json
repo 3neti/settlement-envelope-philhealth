@@ -1,0 +1,39 @@
+{
+    "name": "3neti/settlement-envelope-philhealth",
+    "description": "Synthetic PhilHealth BST demonstration integration for settlement envelopes",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "3neti/settlement-envelope": "^1.3",
+        "illuminate/contracts": "^12.0 || ^13.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^10.0 || ^11.0",
+        "pestphp/pest": "^3.0 || ^4.0",
+        "pestphp/pest-plugin-laravel": "^3.0 || ^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ThreeNeti\\SettlementEnvelopePhilhealth\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ThreeNeti\\SettlementEnvelopePhilhealth\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "pint": "vendor/bin/pint",
+        "test": "vendor/bin/pest"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
